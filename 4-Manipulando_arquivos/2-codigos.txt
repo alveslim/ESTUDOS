@@ -1,0 +1,8 @@
+1. 23-1-4-15 (Posição no alfabeto)
+2. 777-666-2 (Teclado T9 de celular)
+3. 0987-6543 (Sequência invertida)
+4. 112233-44 (Pares de repetição)
+5. 1357-2468 (Ímpares seguidos de pares)
+6. 81-64-49 (Quadrados perfeitos: 92,82,72)
+7. 1010-0101 (Padrão binário alternado)
+8. 555-000-555 (Simetria visual)

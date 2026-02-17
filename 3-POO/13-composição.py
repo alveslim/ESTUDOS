@@ -22,10 +22,10 @@ class zoo: #Composicao, quais animais estao no zoo
         result = 0
         for animal in self.animals_dict.values(): # Percorre os valores do dicionario
             if animal == category: # Compara se o valor é igual a categoria passada como parametro.
-     66                              # Como? Ex: "Fish" == "Fish"
+                                   # Como? Ex: "Fish" == "Fish"
                 result += 1
                 # Conta quantos animais daquela categoria existem
-        return f"Total of {result} in the zoo is {category} "
+        return f"Total of {result} in the zoo is {category}"
 meuZoo = zoo()
 fish1 = fish("Nemo", "Fish") #name, category
 fish2 = fish("Dory", "Fish") #
