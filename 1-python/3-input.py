@@ -1,0 +1,5 @@
+name = input("Type the game name:\n")
+yearLaunch = int(input("Type the year of launch:\n"))
+gamePrice = float(input("Type the game price:\n"))
+planeInclueded = bool(input("Is the plane included? (True/False):\n"))
+print(name, yearLaunch, gamePrice, planeInclueded)
