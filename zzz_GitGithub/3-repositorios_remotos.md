@@ -12,6 +12,9 @@ repositorio remoto, envie-os com esse comando
 L> quando quiser sicronizar o remoto para atualizar
 o local
 
+# git push origin master --force
+L> empurra mole mesmo 
+
 ----------------------------------
 # -- criando ssh --
 ----------------------------------
