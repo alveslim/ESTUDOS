@@ -17,7 +17,7 @@ import os
 import time
 import re
 
-def check_character(int):
+def check_character(int): # Verifica se a string contém caracteres não numéricos -- ainda nao incrementado
     rule = re.compile(f'[^0-9]')
     int = rule.search(int)
     return not bool(int)
