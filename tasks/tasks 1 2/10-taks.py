@@ -1,0 +1,40 @@
+teams = {}
+done = False
+
+def print_teams():
+    print("Teams:")
+    for i, team in enumerate(teams.values()):
+        print(f"{i+1}. {team['name']} ({len(team['players'])} players)")
+
+while not done:
+    # 
+    print("What you want to do?")
+    print("1. Add a team")
+    print("2. Remove a team")
+    print("3. Show all teams")
+    print("4. Add a player to a team")
+    print("5. Remove a player from a team")
+    print("6. Show all players in a team")
+    print("7. Exit")
+    
+    choice = input(">>")
+    if choice == "1":
+        team_name = input("Enter team name: ")
+        teams[team_name] = {"name": team_name, "players": []}
+        print(f"Team '{team_name}' added.")
+        pass
+    elif choice == "2":
+        pass
+    elif choice == "3":
+        print_teams()
+        pass
+    elif choice == "4":
+        pass
+    elif choice == "5":
+        pass
+    elif choice == "6":
+        pass
+    elif choice == "7":
+        done = True
+    else:
+        print("Invalid choice. Please try again.")
