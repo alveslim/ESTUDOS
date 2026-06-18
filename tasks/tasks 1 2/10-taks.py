@@ -24,6 +24,13 @@ while not done:
         print(f"Team '{team_name}' added.")
         pass
     elif choice == "2":
+        print_teams()
+        team_num = int(input("Enter team number to remove: "))
+        if team_num <= len(teams):
+            team_name = list(teams.keys())[team_num - 1]
+            #print(teams[team_name])
+            del teams[team_name]
+            print(f"Team '{team_name}' removed.")
         pass
     elif choice == "3":
         print_teams()
