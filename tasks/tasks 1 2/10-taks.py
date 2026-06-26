@@ -50,7 +50,7 @@ while not done:
             print("Jogador adicionado no time.")
         else:
             print("Número do time inválido")
-        pass
+        
     elif choice == "5":
         print_teams()
         team_num = int(input("Informe o número do time que deseja adicionar jogador: "))
