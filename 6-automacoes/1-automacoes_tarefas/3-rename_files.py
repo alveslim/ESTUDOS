@@ -17,5 +17,12 @@ for path in file_paths:
         #print(new_filename)
         new_filepath = path.with_name(new_filename)
         #print(new_filepath)
-        path.rename(new_filepath)
+        path.rename(new_filepath) 
+        
+        """
+        antes: 
+        dados\folder1\file1.txt
+        depois:
+        dados\folder1\folder1-file1.txt
+        """
         
