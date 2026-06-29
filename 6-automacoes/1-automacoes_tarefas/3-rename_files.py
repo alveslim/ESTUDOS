@@ -10,7 +10,7 @@ file_paths = root_dir.glob('**/*') # ** ta referindo aos diretorios que venha te
 # e /* para fazer a leitura de todos os arquivos dentro desses diretorios
 for path in file_paths:
     #print(path)
-    if path.is_file():
+    if path.is_file(): #  
         #print(path)
         parent_folder = path.parts[-2]
         new_filename = f"{parent_folder}-{path.name}"
