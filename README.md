@@ -20,7 +20,7 @@ O repositório está organizado de forma evolutiva, acompanhando a complexidade 
 * **Módulo 5 - Banco de Dados (BD):** Integração do Python com SQLite, operações CRUD, uso de ORM e execução de queries em tabelas.
 * **Módulo 6 - Automações:** Scripts práticos para o dia a dia, como manipulação de caminhos (paths), renomeação em lote, organização de diretórios e envio automatizado de e-mails.
 * **Módulo 7 - Flask:** Criação de aplicações web utilizando o microframework Flask.
-* **Docker:** Configuração de ambientes isolados, criação de imagens (`Dockerfile`, `.dockerignore`) e gerenciamento de containers da aplicação.
+* **Docker em Python:** Configuração de ambientes isolados, criação de imagens (`Dockerfile`, `.dockerignore`, `.pre-commit.yaml`) e gerenciamento de containers da aplicação.
 * **Git e GitHub:** Anotações sobre repositórios locais e remotos, branches e comandos essenciais de versionamento (como `.gitignore`).
 
 ---
