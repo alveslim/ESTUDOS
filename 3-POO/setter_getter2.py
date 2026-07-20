@@ -5,7 +5,7 @@ class Minhaclasse:
     def setter(self, valor: int) -> None:
         self.__valor = valor
 
-    @property # nosso atributo ficara "mascarado"
+    @property # decorator alterando nosso metodo para agir como atributo ficara "mascarado"
     def getter(self) -> int:
         return self.__valor
     
