@@ -12,13 +12,13 @@ Desafio: Crie uma classe Retangulo que recebe largura e altura no __init__.
     Tente fazer retangulo.area = 50 no final do código e observe o erro retornado pelo Python."""
 
 class Retangulo:
-    def __init__(self) -> None:
-        self.largura = None
-        self.altura = None
+    def __init__(self, largura: int, altura: int) -> None:
+        self.largura = largura
+        self.altura = altura
 
     @property
-    def area(self, valor: int) -> int:
+    def area(self) -> int:
         return self.largura * self.altura
-
-retangulo = Retangulo()
-retangulo.area = 5, 10
+    
+retangulo = Retangulo(10, 5)
+print(retangulo.area)
