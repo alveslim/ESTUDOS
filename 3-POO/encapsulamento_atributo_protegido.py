@@ -10,13 +10,13 @@ Desafio: Reescreva a sua classe original Minhaclasse alterando o atributo de sel
     Adicione um print dentro do getter e do setter indicando quando cada um está sendo chamado."""
 
 class Minhaclasse:
-    def __init__(self)-> None:
-        self._valor = None
+    def __init__(self, valor)-> None:
+        self._valor = valor
 
     @property
     def valor(self) -> type:
         print("calling getter...")
-        return self._valor
+        return print(f"Valor: {self._valor}")
     
     @valor.setter
     def valor(self, valor: type) -> type:
@@ -25,6 +25,6 @@ class Minhaclasse:
 
 """-----------------------------------------------------------------------"""
 
-my_class = Minhaclasse()
+my_class = Minhaclasse(5)
 my_class.valor = 10
 print(my_class.valor)
