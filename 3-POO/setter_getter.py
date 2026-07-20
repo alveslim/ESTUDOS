@@ -3,6 +3,10 @@ class Minhaclasse:
         self.__valor = None
     
     def setter(self, valor: type) -> None:
+                    # L>> valor: int // serve para nivel de interacao con outro usuario
+                    # L>> mesmo definindo como int, pode ser settado minhaclasse.setter("abc12")
+                    # LL>> ira printar normalmente
+
         self.__valor = valor
 
     def getter(self) -> type:

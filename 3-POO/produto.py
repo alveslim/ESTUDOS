@@ -19,5 +19,5 @@ class Produto:
 
 
 produto = Produto()
-produto.preco = 10
+produto.preco = 10       # Chama o @preco.setter
 print(produto.preco)     # Chama o @property (getter) -> Imprime 10

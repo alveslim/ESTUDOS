@@ -26,7 +26,7 @@ class IdadeUsuario:
 
 """--------------testes----------------"""
 jorgeIdade = IdadeUsuario()
-jorgeIdade.idade = 0
+jorgeIdade.idade = 12
 print(jorgeIdade.idade)
 
 #2. Teste inválido (descomente para testar o erro):
