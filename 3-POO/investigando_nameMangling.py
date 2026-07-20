@@ -24,11 +24,11 @@ class Pessoa:
 
 jorge = Pessoa(1.75, "123.456.789-00")
 
-#jorge.apresentar() # ira mostrar o cpf
+jorge.apresentar() # ira mostrar o cpf padrao
 
 #jorge.__coletar_cpf() # ira dar erro, pois o metodo é privado e so pode ser acessado dentro da class
-#print(dir(jorge))
+print(dir(jorge)) # ira mostrar uma lista, um dos elementos é _NomeDaClasse__nome_do_atributo
 
-#print(jorge._Pessoa__cpf)
-jorge._Pessoa__cpf = "999-653.324-99"
+print(jorge._Pessoa__cpf) # acessando o valor privado fora da classe
+jorge._Pessoa__cpf = "999-653.324-99" # alterando o valor fora da classe
 jorge.apresentar()
