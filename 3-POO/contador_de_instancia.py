@@ -31,7 +31,7 @@ obj = Acesso("objeto 1")
 ob2 = Acesso("objeto 2")
 #print(obj.acesso[1])
 print(len(f"Tamanho da lista de objetos instanciados: {Acesso.acesso}")) # Saída: 2 exibindo a quantidade total
-for obj in Acesso.acesso:
+for objeto in Acesso.acesso:
     i = i + 1
     print(f"{i}: {obj.nome}")
 
