@@ -26,7 +26,7 @@ class RelatorioFinanceiro:
     def enviar_por_email(self, destinatario):
         print(f"Enviando relatório para {destinatario}...")
         
-class Gerar_dados:
+class GerarDados:
     def __init__(self):
         pass
     
@@ -40,36 +40,33 @@ class Gerar_dados:
         self.saldo = saldo
         self.despesas = despesas
 
-class Formatar_PDF:
+class FormatarPDF:
     
     pdf = {} # EXISTE U  PROBLEMA DE SALVAR TODOS OS DADOS JUNTOS
     
     def __init__(self):
         # Inicializa as variáveis de instância como vazias ou None
         self.nome = None
-        self.idade = None
+        self.saldo = None
+        self.despesas = None
         
-    
     @property
-    def dados(self) -> dict:
-        return print("Formatando relatório em PDF...")
+    def dados(self) -> None:
+        return dict
         
     @dados.setter
     def dados(self, tupla) -> dict:
-        self.nome, self.idade = tupla # desempacota da tupla
-        Formatar_PDF.pdf.update({"Nome": f"{self.nome}", "Idade": self.idade}) # transforma em dict
+        self.nome, self.saldo, self.despesas = tupla # desempacota da tupla
+        Formatar_PDF.pdf.update({"Nome": f"{self.nome}", "saldo": self.saldo, "despesas": self.despesas}) # transforma em dict
 
-def enviar_por_email(self, destinatario):
-        print(f"Enviando relatório para {destinatario}...")
-        
-class Enviar_Email_Destinatario:
+class EnviarEmail:
     def __init__(self):
-        pass
-
-
+            
+    
+    
 # teste formartar pdf    
 """pdfJorge = Formatar_PDF()
-pdfJorge.dados = ("jorge", 22) # tupla
+pdfJorge.dados = ("jorge", 2000.00, 700.00) # tupla
 print(pdfJorge.pdf) # print o dict"""
     
 # teste gerar dados    
