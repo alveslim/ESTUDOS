@@ -57,21 +57,20 @@ class FormatarPDF:
     @dados.setter
     def dados(self, tupla) -> dict:
         self.nome, self.saldo, self.despesas = tupla # desempacota da tupla
-        FormatarPDF.pdf.update({"Nome": f"{self.nome}", "saldo": self.saldo, "despesas": self.despesas}) # transforma em dict
-
-class EnviarEmail:
-    def __init__(self):
-        pass
-    
+        FormatarPDF.pdf.update(
+            {f"{self.nome}": {
+                "Saldo": self.saldo,
+                "Despesa": self.despesas
+            }}) # transforma em dict
     
 # teste formartar pdf    
 pdfJorge = FormatarPDF()
 pdfCarla = FormatarPDF()
 pdfJorge.dados = ("jorge", 2000.00, 700.00) # tupla
 pdfCarla.dados = ("carla", 10000.00, 2000.00)
-print(pdfJorge.pdf) # print o dict
-print(pdfCarla.pdf)
-print(FormatarPDF.pdf)
+#print(pdfJorge.pdf) # print o dict
+#print(pdfCarla.pdf)
+print(FormatarPDF.pdf["carla"])
     
 # teste gerar dados    
 """dadoJorge = Gerar_dados()
