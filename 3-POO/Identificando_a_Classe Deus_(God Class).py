@@ -42,27 +42,37 @@ class Gerar_dados:
 
 class Formatar_PDF:
     
-    pdf = {}
+    pdf = {} # EXISTE U  PROBLEMA DE SALVAR TODOS OS DADOS JUNTOS
     
     def __init__(self):
-        pass
+        # Inicializa as variáveis de instância como vazias ou None
+        self.nome = None
+        self.idade = None
+        
     
     @property
-    def dados(self, dados) -> dict:
-        self.dados = dados
-        return self.dados
+    def dados(self) -> dict:
+        return print("Formatando relatório em PDF...")
         
     @dados.setter
-    def dados(self, nome, idade) -> dict:
-        self.nome = nome
-        self.idade = idade
-        Formatar_PDF.pdf["nome"] = self.nome
+    def dados(self, tupla) -> dict:
+        self.nome, self.idade = tupla # desempacota da tupla
+        Formatar_PDF.pdf.update({"Nome": f"{self.nome}", "Idade": self.idade}) # transforma em dict
+
+def enviar_por_email(self, destinatario):
+        print(f"Enviando relatório para {destinatario}...")
+        
+class Enviar_Email_Destinatario:
+    def __init__(self):
+        pass
+
+
+# teste formartar pdf    
+"""pdfJorge = Formatar_PDF()
+pdfJorge.dados = ("jorge", 22) # tupla
+print(pdfJorge.pdf) # print o dict"""
     
-pdfJorge = Formatar_PDF()
-pdfJorge.dados = "jorge", 22
-print(pdfJorge.pdf)
-    
-    
+# teste gerar dados    
 """dadoJorge = Gerar_dados()
 dadoJorge.saldo = 12.00
 dadoJorge.despesas = 14.00
