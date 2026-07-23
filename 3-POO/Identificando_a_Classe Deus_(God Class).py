@@ -53,7 +53,7 @@ class FormatarPDF:
     @property
     def dados(self) -> None:
         return dict
-        
+        dadosdict = {}
     @dados.setter
     def dados(self, tupla) -> dict:
         self.nome, self.saldo, self.despesas = tupla # desempacota da tupla
@@ -63,18 +63,29 @@ class FormatarPDF:
                 "Despesa": self.despesas
             }}) # transforma em dict
     
-# teste formartar pdf    
-pdfJorge = FormatarPDF()
+# teste formartar pdf  FormatarPDF  
 pdfCarla = FormatarPDF()
-pdfJorge.dados = ("jorge", 2000.00, 700.00) # tupla
 pdfCarla.dados = ("carla", 10000.00, 2000.00)
 #print(pdfJorge.pdf) # print o dict
-#print(pdfCarla.pdf)
-print(FormatarPDF.pdf["carla"])
+#print(pdfCarla.pdf) # esta printando todos
+print("email sendo enviado...")
+print(FormatarPDF.pdf["carla"]) # nao ta printando o nome...
+print("email enviado")
+
+class EnviarEmail:
+    def __init__(self):
+        pass
+
+    def __str__(self):
+        pass
+
     
 # teste gerar dados    
-"""dadoJorge = Gerar_dados()
+dadoJorge = GerarDados()
 dadoJorge.saldo = 12.00
 dadoJorge.despesas = 14.00
-print(dadoJorge.saldo)
-print(dadoJorge.despesas)"""
+pdfJorge = FormatarPDF()
+pdfJorge.dados = ("jorge", dadoJorge.saldo, dadoJorge.despesas) # tupla
+print("email sendo enviado...")
+print(FormatarPDF.pdf["jorge"]) # nao ta printando o nome...
+print("email enviado")
