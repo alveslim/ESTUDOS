@@ -77,15 +77,11 @@ class EnviarEmail:
         pass
 
     def __str__(self):
-        pass
-
-    
-# teste gerar dados    
-dadoJorge = GerarDados()
-dadoJorge.saldo = 12.00
-dadoJorge.despesas = 14.00
-pdfJorge = FormatarPDF()
-pdfJorge.dados = ("jorge", dadoJorge.saldo, dadoJorge.despesas) # tupla
-print("email sendo enviado...")
-print(FormatarPDF.pdf["jorge"]) # nao ta printando o nome...
-print("email enviado")
+        dadoJorge = GerarDados()
+        dadoJorge.saldo = 12.00
+        dadoJorge.despesas = 14.00
+        pdfJorge = FormatarPDF()
+        pdfJorge.dados = ("jorge", dadoJorge.saldo, dadoJorge.despesas) # tupla
+        print("email sendo enviado...")
+        print(FormatarPDF.pdf["jorge"]) # nao ta printando o nome...
+        print("email enviado")

@@ -24,11 +24,11 @@ class Smartphone(Phone):
 Moto =  Phone('Moto','G7',1000)
 print(Moto)
 Moto.make_a_call(232132)
-print(f"Valor do {Moto._brand}{Moto._model} é {Moto._price()}")
+print(f"Valor do {Moto._brand}{Moto._model} é {Moto._price}")
 print(vars(Moto))
 
 Iphone = Smartphone('Iphone','13',7000,'4GB','128GB','25MP')
 print(Iphone)
 Iphone.make_a_call(32142342)
-print(f"Valor do {Iphone._brand}{Iphone._model} é {Iphone._price()}")
+print(f"Valor do {Iphone._brand}{Iphone._model} é {Iphone._price}")
 print((Iphone))

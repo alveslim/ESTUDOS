@@ -27,7 +27,7 @@ class ProcessadorPagamento:
         return print(f"Validando cartao {cartao}")
 
     def __executar_cobranca(self, valor):
-        return print(f"Cobranca de R${valor}realizada!")
+        return print(f"Cobranca de R${valor} realizada!")
 
 pagamentoJorge = ProcessadorPagamento()
 pagamentoJorge.processsar(10.00, "MasterCard")
