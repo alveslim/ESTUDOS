@@ -4,4 +4,6 @@ try:
     response = num1 / num2
     print(response)
 except:
-    print("ocorreu um erro")
+    print('Ocorreu um erro')
+finally:
+    print("Venha para k independentemente")
