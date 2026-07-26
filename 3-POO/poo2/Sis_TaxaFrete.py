@@ -34,3 +34,5 @@ class LojaVirtual:
 LojaCentro = LojaVirtual('C&A')
 LojaPraia = LojaVirtual('Adidas')
 print(LojaCentro.calcular_frete(12.0))
+LojaVirtual.taxa_frete_padrao = 20.0
+print(LojaCentro.calcular_frete(12.0))
