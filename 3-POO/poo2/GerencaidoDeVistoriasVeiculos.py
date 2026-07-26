@@ -26,6 +26,12 @@ class Inspetor:
         print(f'{self.matricula}: Inspetor {self.nome} realizou o veiculo da placa {veiculo.placa}')
 
 fusca = Veiculo('ABC-123')
+honda_fit = Veiculo('BCD-234')
+honda_civic = Veiculo('CDE-345')
 Richard = Inspetor('Richard', 12343)
 Richard.realizar_vistoria(fusca, 'aprovado')
+Richard.realizar_vistoria(honda_fit, 'desaprovado')
+Richard.realizar_vistoria(honda_civic, 'aprovado')
 print(fusca.status)
+print(honda_fit.status)
+print(honda_civic.status)
