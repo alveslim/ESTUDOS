@@ -7,7 +7,7 @@ Crie uma classe LojaVirtual. Ela
  Construtor:No __init__, receba o nome da filial e crie um atributo de instância self.nome.
  O Método do Frete:Crie um método calcular_frete(self, peso: float) que retorna o valor do frete calculado pela fórmula:
  
- $$\text{Frete} = \text{peso} \times 2.0 + \text{taxa\_frete}$$
+ $$ext{Frete} = ext{peso} imes 2.0 + ext{taxafrete}$$
  
  (Dica: use self.taxa_frete_padrao dentro da fórmula para que o objeto procure primeiro se ele tem uma taxa própria ou se usa a da classe!)
  Os Testes:Instancie duas lojas: loja_centro e loja_interior.
@@ -20,3 +20,17 @@ Crie uma classe LojaVirtual. Ela
  Cenário 4 (Novo Reajuste Global): A empresa mudou a taxa da classe para 25.0.
  A Pergunta:No final, qual será o valor do frete de 3kg na loja_centro e na loja_interior? 
  Monte o código e teste sua hipótese!"""
+
+class LojaVirtual:
+    taxa_frete_padrao = 15.0
+
+    def __init__(self, filial):
+        self.filial = filial
+        
+    def calcular_frete(self, peso: float) -> float:
+        Frete = peso * 2.0 + self.taxa_frete_padrao
+        return Frete
+
+LojaCentro = LojaVirtual('C&A')
+LojaPraia = LojaVirtual('Adidas')
+print(LojaCentro.calcular_frete(12.0))
