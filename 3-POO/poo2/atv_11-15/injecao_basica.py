@@ -13,12 +13,13 @@ class Motor:
         print(f"{AZUL}Ligando o motor {self.potencia} {mensagem}... VRUM!{RESET}")
         
 class Carro:
-    def __init__(self, motor: Motor):
+    def __init__(self, motor: Motor, modelo):
         self.motor = motor
+        self.modelo = modelo
         
     def iniciar_corrida(self):
         # O carro usa o motor que foi injetado nele
-        self.motor.ligar("para iniciar a corrida")
+        self.motor.ligar(f"no {self.modelo} para iniciar a corrida")
         
         time.sleep(1.5)
         print(f'{VERMELHO}1{RESET}')
@@ -32,8 +33,8 @@ class Carro:
 motor_v8 = Motor("V8 5.0")
 motor_mil = Motor("1.0 Flex")
 
-mustang = Carro(motor_v8)
-celta = Carro(motor_mil)
+mustang = Carro(motor_v8, 'mustang')
+celta = Carro(motor_mil, 'celta')
 
 print("--- Corrida 1 ---")
 mustang.iniciar_corrida()
