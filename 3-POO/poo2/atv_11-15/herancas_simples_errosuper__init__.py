@@ -9,7 +9,7 @@ class Passaro:
     
 class Pardal(Passaro):    
     def __init__(self):
-        super().__init__(self)
+        super().__init__(self) 
         self.name = "Pardal"
         self.color = "vermelho"
         
