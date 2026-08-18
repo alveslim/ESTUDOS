@@ -14,4 +14,4 @@ def test_informacoes():
     assert "name" in resp
     assert "Height" not in resp # sempre colocando instrucoes
     assert "Rafa" in resp["name"]
-    
+
