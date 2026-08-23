@@ -16,3 +16,4 @@ name =  input("Digite seu nome: \n")
 with open("4-Manipulando_arquivos/2-names.txt", "a") as file:
 # TENTE abrir o arquivo "names.txt" para escrita (append) APELIDO "file"
     file.write(f"{name}\n")
+    

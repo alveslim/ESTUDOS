@@ -11,6 +11,7 @@ import time
 VERMELHO = '\033[31m'
 VERDE    = '\033[32m'
 AZUL     = '\033[34m'
+AMARELO = '\033[33m'
 CIANO    = '\033[36m'
 RESET    = '\033[0m' # Importante: Volta para a cor padrão
 

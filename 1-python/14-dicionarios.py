@@ -22,11 +22,16 @@ game["players"] = [2, 4]  # Também cria a chave se não existir ou atualiza se 
 
 game = {"name": "Xadrez"}
 
+# --------------------------------------------------------------
+
+
 # Adiciona ou atualiza múltiplas chaves de uma vez
-game.update({"players": [2, 4], "status": "ativo", "year": 2026})
+game.update({"players": [2, 4], "status": "ativo", "year": 2026}) ######
 
 print(game)
 # Saída: {'name': 'Xadrez', 'players': [2, 4], 'status': 'ativo', 'year': 2026}
+
+# --------------------------------------------------------------
 
 game = {"name": "Xadrez"}
 
