@@ -22,3 +22,4 @@ cat = Gato("Argentina")
 cat.miar()
 cat._dormir() # Deveria dar erro / elementos protegidos nao sao chamados por objetos
 print(cat._tamanho) # elementos protegidos nao sao chamados por objetos
+# ddd

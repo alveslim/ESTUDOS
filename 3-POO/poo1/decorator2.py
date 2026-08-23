@@ -27,4 +27,4 @@ def split_string(function):
         func = function()                # 1. Executa a função e recebe a string
         splitted_string = func.split()   # 2. Divide a string nos espaços em branco
         return splitted_string           # 3. Retorna uma Lista (ex: ["Olá", "Mundo"])
-    return wrapper
+    return wrapper dsakldnkljsandlkjasndkasnd

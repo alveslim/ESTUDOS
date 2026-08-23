@@ -20,6 +20,6 @@ class Console:
 wiiU = Console.from_text("Meu video game é WiiU e o preço é 1000")
 ps5 = Console.from_text("Meu video game é Ps5 e o preço é 5000")
 xboxOne = Console.from_text("Meu video game é XboxOne e o preço é 4600")
-print(wiiU.__dict__)
+print(wiiU.price)
 print(ps5.__dict__)
-print(xboxOne.__dict__)
+print(xboxOne.__dict__) saldnsajndjklasndlkj

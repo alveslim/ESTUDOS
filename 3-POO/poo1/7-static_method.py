@@ -21,4 +21,4 @@ class Language:
 
 print(Language.courses_trail('Python Fundamentos'))
 print(Language.courses_trail('Automação com Python'))
-print(Language.courses_trail('IA'))
+print(Language.courses_trail('IA')) fdsadajsiodnmaskl

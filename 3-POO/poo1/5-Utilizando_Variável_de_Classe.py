@@ -1,4 +1,5 @@
-class Movie:    plataform = "OneBitFilmes"
+class Movie:    
+    plataform = "OneBitFilmes"
     def __init__(self, name, yearLaunch, includedPlan, durationMinutes):
         self.name = name
         self.yearLaunch = yearLaunch
@@ -39,4 +40,4 @@ Movie.plataform = "OneBitCode Pro"
 movie2.evaluate(10.0)
 movie2.evaluate(9.5)
 movie2.technical_sheet()
-movie2.average()
+movie2.average()oijuhihjbkihvbihbhivbjkhvkbjhkijvb

@@ -11,22 +11,20 @@ class Celular:
     def abrir_youtube(self) -> None:
         print("Abrindo Youtube...")
 
-
 class Pessoa:
-    def __init__(self, celular: Celular) -> None:
+    def __init__(self, celular: Celular) -> None: # INICIANDO
         self.__celular = celular
 
     def pedir_pizza(self) -> None:
         print("Buscando o celular...")
         print("definindo o sabor...")
-        self.__celular.enviar_mensagem("quero uma de calabreza")
+        self.__celular.enviar_mensagem("quero uma de calabreza") # injecao
         print("aguardando a chegada")
 
     def estudar(self) -> None:
         print("Sentando no computador")
-        self.__celular.abrir_youtube()
+        self.__celular.abrir_youtube()  
         print("Anotando o conteudo")
-
 
 android = Celular("samsung")
 iphone = Celular("iphone")

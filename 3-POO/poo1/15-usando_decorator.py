@@ -19,4 +19,4 @@ print(text())
 @uppercase_decorator
 def example():
     return "Hello World from Python Decorators"
-print(example())
+print(example()) asmk;dmask;dmask;mdaskldmaskl;
