@@ -33,3 +33,22 @@ Sua tarefa: Refatore o código acima separando-o em 3 classes distintas,
 onde cada uma tenha apenas um motivo para mudar (Ex: uma para os dados, 
 outra para formatação e outra para envio).
 """
+
+# 1. Tupla Simples
+coordenada_gps = (-3.1019, -60.0250)
+
+# Experimento de Falha:
+# coordenada_gps[0] = -4.0000 
+# Isso geraria o erro: TypeError: 'tuple' object does not support item assignment
+
+# 2. Tupla Aninhada
+# Ideal para rotas ou configurações fixas do sistema
+rota_de_patrulha = (
+    ("Ponto A", 10.5, 20.1),
+    ("Ponto B", 15.2, 22.8),
+    ("Ponto C", 18.0, 25.5)
+)
+
+# Acessando o nome do último ponto
+ponto_final = rota_de_patrulha[2][0] 
+print(ponto_final)               # Retorna "Ponto C"
