@@ -25,3 +25,22 @@ gamesList.sort() # ordena a lista em ordem alfabetica
 gameReset = gamesList.copy()
 gameReset.remoce("Star wars") # remove o item especifico da lista
 gamesList.clear() # limpa toda a lista
+
+# 1. Lista Simples
+sensores = ["temperatura", "umidade", "pressao"]
+sensores.append("luminosidade")  # Adiciona ao final
+sensores[1] = "chuva"            # Substitui "umidade" por "chuva"
+print(sensores)                  # ['temperatura', 'chuva', 'pressao', 'luminosidade']
+
+# 2. Lista Aninhada (Matriz Bidimensional)
+# Muito usada para mapear grades, como pixels em uma tela ou posições em um mapa
+grade = [
+    [0, 1, 0],
+    [1, 1, 1],
+    [0, 0, 0]
+]
+
+# Modificando um item aninhado
+# Acessa a segunda lista (índice 1), e o terceiro item dela (índice 2)
+grade[1][2] = 9 
+print(grade[1])                  # Retorna [1, 1, 9]
