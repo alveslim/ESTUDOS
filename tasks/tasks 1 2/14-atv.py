@@ -16,3 +16,35 @@ ou False caso falhe em qualquer uma:
     Conter pelo menos uma letra.
 """
 
+def validar_senha(senha):
+    
+    total_digitos = len(senha)
+    if total_digitos < 6:
+        print("precisa ter ao menos 6 digitos!")
+        return False
+        
+    if " " in senha:
+        print('Nao pode conter espaco em branco')
+        return False
+        
+    letters = 0
+    numbers = 0
+    # contador letras e numeros 
+    for char in senha:
+        if char.isalpha():
+            letters += 1
+        elif char.isdigit():
+            numbers += 1            
+    if letters <= 0:
+        print("deve conter pelo menos uma letra")
+        return False       
+    if numbers <= 0:
+        print("deve conter pelo menos um numero")
+        return False
+    return True 
+        
+while True:
+    password = input("\nEscreva a senha: ")
+    if validar_senha(password):
+        print("Senha cadastrada com sucesso!")
+        break
