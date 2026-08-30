@@ -1,4 +1,3 @@
-@ -0,0 +1,35 @@
 """
 Desafio 2: Filtro de Compatibilidade de Hardware
 Foco: 14-dicionarios.py, 20-list_comprehsion.py, 18-for.py
