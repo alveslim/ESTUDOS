@@ -1,11 +1,12 @@
 import flet as ft
+from custom_checkbox import Checkbox
 
 def main(page: ft.Page):
     page.title = 'flet app'
     page.padding = 20
     
     def add_task(e):
-        task_list.controls.append(ft.Checkbox(label=new_task.value))
+        task_list.controls.append(Checkbox(label=new_task.value))
         new_task.value = ''
         page.update()
         
@@ -22,7 +23,7 @@ def main(page: ft.Page):
                     new_button
                 ]
             ),
-            task_list
+            task_list,
         ]
     )
     
