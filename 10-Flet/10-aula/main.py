@@ -1,48 +1,64 @@
 import flet as ft
-from custom_checkbox import Checkbox
 
-def main(page: ft.Page):
-    page.title = 'flet app'
-    page.padding = 20
+# classe para criar as tarefas
+class Task(ft.Column):
+    pass
+# classe para criar o aplicativo
+class TodoApp(ft.Column):
     
-    # capturar a altura e largura da pagina do nosso aplicativo
-    WIDTH:  int = page.width
-    HEIGHT: int = page.height
-    print(f'largura: {WIDTH} | altura: {HEIGHT}')
-    
-    async def add_task(e):
-        if new_task.value == '':
-            await new_task.focus()
-            return
-        task_list.controls.append(Checkbox(new_task.value))
-        new_task.value = ''
-        page.update()
-        await new_task.focus()
+    def build(self):
+        self.new_task = ft.TextField(
+            hint='Insira a Tarefa: ',
+            expand=True,
+            on_submit=self.add_task,
+            )
         
-    new_task = ft.TextField(hint_text="Insira uma tarefa", 
-                            expand=True,
-                            autofocus=True, on_submit=add_task)
-    new_button = ft.FloatingActionButton(icon=ft.Icons.ADD, 
-                                         on_click=add_task)
+        self.task = ft.Column()
+        
+        self.filter = ft.Tabs(
+            scrollable=False,
+            selected_index=0,
+            on_change=self.tabs_changed,
+            tabs=[
+                ft.Tab(text='Todas'),
+                ft.Tab(text='Ativas'),
+                ft.Tab(text='Concluidas'),
+            ],
+        )
+        self.items_left = ft.Text('0 tarefas adicionadas')
+        
+        return ft.Column(
+            controls=[
+                # titulo da aplicacao
+                ft.Row([
+                    ft.Text(value='Tarefas',
+                            theme_style='headlineMedium'
+                            size=34,
+                            weight='bold',
+                            color=ft.color.with_opacity(0,7, 'black'),                            
+                        )
+                ],
+                alignment='center'
+                ),
+                ft.Row(
+                    controls=[
+                        
+                    ]
+                    ),  
+                ft.Column()  
+            ]
+        )
+        
+    def tabs_changed(self, e):
+        pass
     
-    task_list = ft.Column(spacing=0,
-                          height=HEIGHT-170, 
-                          scroll=ft.ScrollMode.ADAPTIVE, 
-                          expand=True)
-    
-    task_column = ft.Column(
-        width=400,
-        controls=[
-            ft.Row(
-                controls=[
-                    new_task,
-                    new_button
-                ]
-            ),
-            task_list,
-        ]
-    )
-    
-    page.add(task_column)
+    def add_task(self, e):
+        pass
+        
+    def main(page: ft.Page):
+        page.title = 'Minhas Tarefas'
+        page.padding = 20
+        app = TodoApp()
+        page.add(app)
     
 ft.app(target=main)
