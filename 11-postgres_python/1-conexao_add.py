@@ -13,10 +13,15 @@ def consultar_tabela():
     try:
         with psycopg.connect(**DB_PARAMS) as conn:
             with conn.cursor() as cur:
-                tabela = cur.execute("""
+                cur.execute("""
                     SELECT * FROM usuarios;
                     """)
-        print(tabela)
+                tabela = cur.fetchall()
+                print(tabela)
+
+                for linha in tabela:
+                    print(linha)
+
     
     except psycopg.Error as e:
         print('Erro ao consultar tabelas')
@@ -46,5 +51,5 @@ def inserir_usuario(nome: str, email: str, ativo: bool = True):
 
 
 if __name__ == "__main__":
-    inserir_usuario("Fabiano Machado", "fabiano@exemplo.com", True)
+    inserir_usuario("Maria Joao", "maria@exemplo.com", True)
     consultar_tabela()
